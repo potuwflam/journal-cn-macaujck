@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门六合彩 · 资料索引平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e1e1e;
+            background: #f7f9fc;
+        }
+
+        /* 深色头图 (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1d2f46 70%, #172b3c 100%);
+            color: #e9edf2;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #f7f9fc;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            opacity: 0.15;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+            color: #d6e4f0;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b0c9dd;
+            max-width: 700px;
+            margin: 0.8rem auto 2rem;
+            font-weight: 350;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #2d4b68;
+            padding: 0.35rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #cfe1f0;
+            letter-spacing: 0.3px;
+            border: 1px solid #4a6f8c;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #0b1a2e;
+            border-left: 5px solid #b5812c;
+            padding-left: 1rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid #e9edf2;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #0f2b40;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #3e4f5e;
+        }
+
+        .highlight-link {
+            color: #b5812c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #b5812c4d;
+            transition: border 0.2s;
+        }
+
+        .highlight-link:hover {
+            border-bottom: 1px solid #b5812c;
+            color: #956d22;
+        }
+
+        .faq-block {
+            background: white;
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f6;
+        }
+
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .faq-item:last-child {
+            border-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #0b1a2e;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .faq-a {
+            color: #405464;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d9e1e9;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #3d637f;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            border-bottom: 1px solid #b5812c;
+            color: #0f2b40;
+        }
+
+        .disclaimer-note {
+            background: #f2f5f9;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            color: #445d72;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero { padding: 3rem 1rem 2.5rem; }
+            .card-grid { gap: 1rem; }
+            .faq-block { padding: 1.2rem; }
+            .container { padding: 1.5rem 1rem 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero 深色头图 -->
+    <header class="hero">
+        <span class="badge">资料索引 · 信息整理</span>
+        <h1>澳门六合彩 · 数据与参考</h1>
+        <p class="sub">围绕历史资讯、号码走势、策略整理，提供结构化的信息聚合入口。适合希望系统查阅资料的浏览者。</p>
+        <div style="margin-top: 0.5rem; color: #b0c9dd; font-size: 0.9rem;">
+            持续索引 · 客观整合
+        </div>
+    </header>
+
+    <!-- 浅色正文区域 -->
+    <main class="container">
+
+        <!-- 优势区：信息索引的特点 -->
+        <h2 class="section-title">资料整理特点</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>多维度聚合</h3>
+                <p>将开奖结果、号码频率、间隔统计等内容归类整理，减少碎片化查找时间。</p>
+            </div>
+            <div class="card">
+                <h3>结构清晰</h3>
+                <p>按时间轴、号码区间、冷热等维度建立目录，方便交叉比对与个人记录。</p>
+            </div>
+            <div class="card">
+                <h3>低干扰阅读</h3>
+                <p>界面专注信息本身，无弹窗或诱导跳转，适合沉下心做资料查阅。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：从索引角度切入 -->
+        <h2 class="section-title" style="margin-top: 1.8rem;">索引说明</h2>
+        <p style="margin-bottom: 1.2rem; color: #2b445a;">
+            本页面所引用的内容均来自公开可获取的统计数据与历史记录，旨在为有兴趣了解
+            <a href="https://cn-macaujck.com" class="highlight-link">澳门六合彩</a>
+            的朋友提供一种相对系统的信息组织方式。
+            所有数据均按原始来源整理，不包含预测或保证类表述。使用者可基于自身需求筛选所需信息。
+        </p>
+        <p style="color: #3a556b;">
+            我们建议在浏览时关注号码的长期分布与概率特征，而非短期波动。资料整理者会定期更新索引结构，以保持资讯的时效性。
+        </p>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-block">
+            <h3 style="font-weight: 500; font-size: 1.2rem; margin-bottom: 1.2rem; color: #0b1a2e;">常见问题摘要</h3>
+            <div class="faq-item">
+                <div class="faq-q">✧ 资料从何处获取？</div>
+                <div class="faq-a">主要基于各期开奖公告及公开统计，经交叉核对后整理成统一格式。索引平台不直接发布原始数据，而是提供结构化入口。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">✧ 是否会包含策略建议？</div>
+                <div class="faq-a">不包含。本索引只陈列历史事实与基础指标，不提供任何投注方向或参考策略。用户需自行判断。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">✧ 更新频率如何？</div>
+                <div class="faq-a">通常在每期结果公布后 24 小时内完成数据同步。节假日顺延。</div>
+            </div>
+            <div style="margin-top: 0.8rem; font-size: 0.9rem; color: #556f84;">
+                更多说明可参阅完整 FAQ 页面。
+            </div>
+        </div>
+
+        <!-- 底部链接 -->
+        <div class="footer-links">
+            <a href="https://cn-macaujck.com">澳门六合彩</a>
+            <a href="#">数据说明</a>
+            <a href="#">历史归档</a>
+            <a href="#">联络索引组</a>
+            <span style="color: #7c93a5;">· 页面版本 24.06b</span>
+        </div>
+
+        <div class="disclaimer-note">
+            ⚠️ 免责提示：本索引平台仅用于信息展示与资料整理，不构成任何形式的建议或引导。请理性看待统计数据，遵守当地法律法规。
+        </div>
+
+    </main>
+
+</body>
+</html>
